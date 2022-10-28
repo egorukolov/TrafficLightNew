@@ -17,16 +17,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEB-sq-BTp">
-                                <rect key="frame" x="72.5" y="537" width="230" height="56"/>
+                                <rect key="frame" x="72.5" y="539" width="230" height="54"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="X2F-em-YTE"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Start">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="35"/>
-                                </buttonConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startButtonPresswd" destination="BYZ-38-t0r" eventType="touchUpInside" id="ceT-sV-azn"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="3HE-nX-Ja9">
                                 <rect key="frame" x="137.5" y="32" width="100" height="366"/>
@@ -40,14 +42,14 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="11P-Yi-dxV">
                                         <rect key="frame" x="0.0" y="133" width="100" height="100"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="11P-Yi-dxV" secondAttribute="height" multiplier="1:1" id="kWF-QH-hb1"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ab4-65-26z">
                                         <rect key="frame" x="0.0" y="266" width="100" height="100"/>
-                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ab4-65-26z" secondAttribute="height" multiplier="1:1" id="pRE-PK-9NL"/>
                                         </constraints>
@@ -65,6 +67,12 @@
                             <constraint firstItem="EEB-sq-BTp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yQn-p3-gwZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenSignalView" destination="ab4-65-26z" id="PDh-Lc-lOE"/>
+                        <outlet property="redSignalView" destination="Wg1-nv-2SO" id="lvW-Ui-7Hs"/>
+                        <outlet property="startButton" destination="EEB-sq-BTp" id="hSs-h7-2yS"/>
+                        <outlet property="yellowSignalView" destination="11P-Yi-dxV" id="IlE-xq-fxT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
